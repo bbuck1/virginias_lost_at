@@ -30,15 +30,15 @@ at_trail_current<- read_sf("data/at_aoi/AT_aoi.shp")
 
 pal <- colorFactor(c("orange","red", "blue"), domain = c("1931 AT", "1941 AT", "Current AT"))
 
-leaflet() %>% 
-  addProviderTiles("Stamen.TerrainBackground") %>%
+leaflet(options = leafletOptions(maxZoom = 11, minZoom = 9)) %>% 
+  addProviderTiles("Esri.WorldShadedRelief") %>%
   setView(lng = -80.616, 
           lat = 37.83, 
           zoom = 9) %>%
   setMaxBounds(lng1 = -082.17,
                lat1 = 37.69,
                lng2 = -079.16,
-               lat2 = 36.52) %>% 
+               lat2 = 36.52) %>%
   addPolygons(data = va_county,
               color = 'black',
               weight = 2.0,
