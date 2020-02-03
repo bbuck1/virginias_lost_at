@@ -1,11 +1,6 @@
-library(tidyverse)
 library(dplyr)
-library(lubridate)
-library(scales)
-library(readr)
 library(leaflet)
 library(sf)
-library(shiny)
 library(distill)
 
 va_shape<- read_sf("C:/Users/bpbuc/Documents/Brandan's Stuff/_PhD Stuff/RRCHNM_Projects/at_project/county_bound/20th_cen_VA_counties_aoi.shp")
