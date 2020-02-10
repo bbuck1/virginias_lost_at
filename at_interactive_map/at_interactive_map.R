@@ -23,12 +23,12 @@ at_trail_current<- read_sf("data/AT_aoi.shp")
 
 pal <- colorFactor(c("orange","red", "blue"), domain = c("1931 AT", "1941 AT", "Current AT"))
 
-leaflet(options = leafletOptions(maxZoom = 14, minZoom = 9)) %>% 
+leaflet(options = leafletOptions(maxZoom = 14, minZoom = 8)) %>% 
   addProviderTiles("Esri.WorldShadedRelief") %>% 
   addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.50)) %>%
   setView(lng = -80.616, 
           lat = 37.83, 
-          zoom = 9) %>%
+          zoom = 8) %>%
   setMaxBounds(lng1 = -082.17,
                lat1 = 37.69,
                lng2 = -079.16,
