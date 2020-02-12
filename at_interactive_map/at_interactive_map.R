@@ -13,7 +13,8 @@ va_county<- va_shape %>%
 
 nc_county<- read_sf("county_bound/20th_cen_NC_counties_aoi.shp")
 
-at_map_points_site<- read.csv("data/at_map_points_site_2.csv")
+at_map_points_site<- read.csv("data/at_map_points_site_combined.csv")
+names(at_map_points_site_combined)[1] <- "name"
 
 at_trail_31<- read_sf("data/1931_at.shp")
 
